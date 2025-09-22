@@ -966,7 +966,8 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* i wnat to center the image */
+  /* i wnat to center the image that come the face in */
+
 
   border-radius: 50%;
 }
