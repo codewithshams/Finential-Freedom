@@ -665,7 +665,185 @@ FAQs.forEach((faq, index) => {
 // -------------------------------------------------------------
 
 
+// -------------------------------------------------------------
+// Accountant Shortage Section
+// -------------------------------------------------------------
 
 
+
+   // Certificate data
+   const certificates = {
+    "Chartered Accountant Certificate": {
+        type: "pdf",
+        url: "./public/images/certificates/ACCA-Membership Certificate.pdf",
+        description: "This certificate acknowledges the achievement of Chartered Accountant status from the Institute of Chartered Accountants in England and Wales (ICAEW)."
+    },
+    "ACCA-Membership_Certificate": {
+        type: "pdf",
+        url: "./public/images/certificates/ACCA-Membership_Certificate.pdf",
+        description: "Fellow status in the Association of Chartered Certified Accountants (ACCA), recognizing advanced professional standing and experience."
+    },
+    "BSc (Hons) Applied Accounting Degree": {
+        type: "pdf",
+        url: "./public/images/certificates/BSc (Hons) Applied Accounting Degree.pdf",
+        description: "Bachelor of Science with Honors in Applied Accounting from Oxford Brookes University, UK."
+    },
+    "6 US Certifications": {
+        type: "pdf",
+        url: "./public/images/certificates/6 US Certifications.pdf",
+        description: "Six specialized certifications from the Institute of Financial Consultants (IFC), covering various aspects of US financial practices and regulations."
+    },
+    "QuickBooks ProAdvisor Certification": {
+        type: "pdf",
+        url: "./public/images/certificates/QuickBooks ProAdvisor Certification.pdf",
+        description: "Certified QuickBooks Professional with ProAdvisor status, demonstrating expertise in QuickBooks software and financial management solutions."
+    }
+};
+
+// PDF state variables
+let currentPdf = null;
+let currentPageNum = 1;
+let totalPages = 1;
+
+// Function to load and display PDF
+async function loadPdf(url, title) {
+    try {
+        // Show loading spinner
+        document.querySelector('.loading-spinner').style.display = 'block';
+        document.getElementById('certificate-content').innerHTML = '';
+        
+        // Load the PDF
+        const loadingTask = pdfjsLib.getDocument(url);
+        currentPdf = await loadingTask.promise;
+        totalPages = currentPdf.numPages;
+        
+        // Render the first page
+        await renderPage(currentPageNum);
+        
+        // Update page info
+        document.getElementById('page-info').textContent = `Page: ${currentPageNum}/${totalPages}`;
+        
+        // Show PDF controls if multiple pages
+        if (totalPages > 1) {
+            document.getElementById('pdf-controls').style.display = 'flex';
+        } else {
+            document.getElementById('pdf-controls').style.display = 'none';
+        }
+        
+        // Hide loading spinner
+        document.querySelector('.loading-spinner').style.display = 'none';
+    } catch (error) {
+        console.error('Error loading PDF:', error);
+        document.getElementById('certificate-content').innerHTML = 
+            '<p class="text-danger">Error loading certificate. Please try again.</p>';
+        document.querySelector('.loading-spinner').style.display = 'none';
+    }
+}
+
+// Function to render a specific PDF page
+async function renderPage(pageNum) {
+    const page = await currentPdf.getPage(pageNum);
+    const viewport = page.getViewport({ scale: 1.5 });
+    
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
+    
+    const renderContext = {
+        canvasContext: context,
+        viewport: viewport
+    };
+    
+    await page.render(renderContext).promise;
+    
+    // Clear previous content and add the new canvas
+    document.getElementById('certificate-content').innerHTML = '';
+    document.getElementById('certificate-content').appendChild(canvas);
+}
+
+// Function to display an image certificate
+function loadImage(url, title) {
+    // Show loading spinner
+    document.querySelector('.loading-spinner').style.display = 'block';
+    document.getElementById('certificate-content').innerHTML = '';
+    
+    // Create and load the image
+    const img = document.createElement('img');
+    img.src = url;
+    img.alt = title;
+    img.className = 'certificate-image';
+    
+    img.onload = function() {
+        document.getElementById('certificate-content').appendChild(img);
+        document.querySelector('.loading-spinner').style.display = 'none';
+    };
+    
+    img.onerror = function() {
+        document.getElementById('certificate-content').innerHTML = 
+            '<p class="text-danger">Error loading certificate image. Please try again.</p>';
+        document.querySelector('.loading-spinner').style.display = 'none';
+    };
+    
+    // Hide PDF controls for images
+    document.getElementById('pdf-controls').style.display = 'none';
+}
+
+// Event listeners for credential items
+document.querySelectorAll('.credential-item').forEach(item => {
+    item.addEventListener('click', function() {
+        const certificateType = this.getAttribute('data-certificate-type');
+        const certificateUrl = this.getAttribute('data-certificate-url');
+        const certificateTitle = this.getAttribute('data-certificate-title');
+        
+        // Set modal title
+        document.getElementById('certificateModalLabel').textContent = certificateTitle;
+        
+        // Set certificate description
+        const description = certificates[certificateTitle]?.description || "Certificate details not available.";
+        document.getElementById('certificate-description').textContent = description;
+        
+        // Reset PDF state
+        currentPdf = null;
+        currentPageNum = 1;
+        
+        // Load certificate based on type
+        if (certificateType === 'pdf') {
+            loadPdf(certificateUrl, certificateTitle);
+        } else {
+            loadImage(certificateUrl, certificateTitle);
+        }
+        
+        // Show the modal
+        const certificateModal = new bootstrap.Modal(document.getElementById('certificateModal'));
+        certificateModal.show();
+    });
+});
+
+// Event listeners for PDF navigation
+document.getElementById('prev-page').addEventListener('click', function() {
+    if (currentPdf && currentPageNum > 1) {
+        currentPageNum--;
+        renderPage(currentPageNum);
+        document.getElementById('page-info').textContent = `Page: ${currentPageNum}/${totalPages}`;
+    }
+});
+
+document.getElementById('next-page').addEventListener('click', function() {
+    if (currentPdf && currentPageNum < totalPages) {
+        currentPageNum++;
+        renderPage(currentPageNum);
+        document.getElementById('page-info').textContent = `Page: ${currentPageNum}/${totalPages}`;
+    }
+});
+
+// Reset modal when closed
+document.getElementById('certificateModal').addEventListener('hidden.bs.modal', function() {
+    document.getElementById('certificate-content').innerHTML = '';
+    document.getElementById('pdf-controls').style.display = 'none';
+    document.querySelector('.loading-spinner').style.display = 'none';
+    currentPdf = null;
+    currentPageNum = 1;
+});
 
 
