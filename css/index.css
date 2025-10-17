@@ -1250,14 +1250,17 @@ a {
 }
 
 
-.accounting-section .screenshots-container {
+/* .accounting-section  */
+.screenshots-container {
   margin: 60px 0 40px;
 }
-.accounting-section .section-title-inner {
+/* .accounting-section  */
+.screenshots-container .section-title-inner {
   text-align: center;
   margin: 40px auto;
 }
-.accounting-section .section-title-inner h3 {
+/* .accounting-section  */
+.screenshots-container  .section-title-inner h3 {
   font-weight: 700;
   background: var(--gradient);
   -webkit-background-clip: text;
@@ -1266,14 +1269,14 @@ a {
   margin-bottom: 20px;
 }
 
-.accounting-section .screenshot-grid {
+.screenshots-container .screenshot-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 10px;
   margin-top: 30px;
 }
 
-.accounting-section .screenshot-item {
+.screenshots-container .screenshot-item {
   background: linear-gradient(145deg, var(--dark-card), var(--darker-card));
   border-radius: 12px;
   overflow: hidden;
@@ -1282,35 +1285,35 @@ a {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.accounting-section .screenshot-item:hover {
+.screenshots-container .screenshot-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(79, 70, 229, 0.25);
 }
 
-.accounting-section .screenshot-img {
+.screenshots-container .screenshot-img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   display: block;
 }
 
-.accounting-section .screenshot-content {
+.screenshots-container .screenshot-content {
   padding: 15px;
 }
 
-.accounting-section .screenshot-content h4 {
+.screenshots-container .screenshot-content h4 {
   font-size: 1rem;
   margin-bottom: 8px;
   color: var(--text);
 }
 
-.accounting-section .screenshot-content p {
+.screenshots-container .screenshot-content p {
   font-size: 0.85rem;
   color: var(--text-light);
   margin-bottom: 0;
 }
 
-.accounting-section .pricing-box {
+.screenshots-container .pricing-box {
     background: linear-gradient(145deg, var(--dark-card), var(--darker-card));
     border-radius: 16px;
     padding: 30px;
@@ -1321,7 +1324,7 @@ a {
     overflow: hidden;
 }
 
-.accounting-section .pricing-box::before {
+.screenshots-container .pricing-box::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1333,7 +1336,7 @@ a {
     z-index: 0;
 }
 
-.accounting-section .price-tag {
+.screenshots-container .price-tag {
     font-size: 3.5rem;
     font-weight: 700;
     margin: 20px 0;
@@ -1343,12 +1346,12 @@ a {
     color: transparent;
 }
 
-.accounting-section .price-note {
+.screenshots-container .price-note {
     color: var(--text-light);
     margin-bottom: 25px;
 }
 
-.accounting-section .enroll-btn {
+.screenshots-container .enroll-btn {
     background: var(--gradient);
     color: white;
     border: none;
@@ -1359,20 +1362,20 @@ a {
     box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
 }
 
-.accounting-section .enroll-btn:hover {
+.screenshots-container .enroll-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
 }
 
 /* Animation elements */
-.accounting-section .floating-shape {
+.screenshots-container .floating-shape {
     position: absolute;
     border-radius: 50%;
     opacity: 0.1;
     z-index: 0;
 }
 
-.accounting-section .shape-1 {
+.screenshots-container .shape-1 {
     width: 300px;
     height: 300px;
     background: var(--primary);
@@ -1380,7 +1383,7 @@ a {
     right: -150px;
 }
 
-.accounting-section .shape-2 {
+.screenshots-container .shape-2 {
     width: 200px;
     height: 200px;
     background: var(--secondary);
@@ -1394,32 +1397,32 @@ a {
     50% { transform: translateY(-5px); }
 }
 
-.accounting-section .feature-card {
+.screenshots-container .feature-card {
     animation: accounting-section-float 6s ease-in-out infinite;
 }
 
-.accounting-section .feature-card:nth-child(2) {
+.screenshots-container .feature-card:nth-child(2) {
     animation-delay: 1s;
 }
 
-.accounting-section .feature-card:nth-child(3) {
+.screenshots-container .feature-card:nth-child(3) {
     animation-delay: 2s;
 }
 
-.screenshot-grid {
+.screenshots-container .screenshot-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 25px;
+  gap: 10px;
   max-width: 1300px;
   margin: 0 auto;
 }
 
-.accounting-section .screenshot-item:hover {
+.screenshots-container .screenshot-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-.accounting-section .screenshot-item a {
+.screenshots-container .screenshot-item a {
   text-decoration: none;
   color: inherit;
   display: flex;
@@ -1427,7 +1430,7 @@ a {
   height: 100%;
 }
 
-.accounting-section .media-container {
+.screenshots-container .media-container {
   position: relative;
   width: 100%;
   height: 180px;
@@ -1435,18 +1438,18 @@ a {
   background-color: #000;
 }
 
-.accounting-section .screenshot-img, .accounting-section .video-player {
+.screenshots-container .screenshot-img, .screenshots-container .video-player {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* .accounting-section .video-player {
+/* .screenshots-container .video-player {
   display: none;
 } */
 
-.accounting-section .play-button {
+.screenshots-container .play-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1463,19 +1466,19 @@ a {
   transition: all 0.3s ease;
 }
 
-.accounting-section .play-button:hover {
+.screenshots-container .play-button:hover {
   background: white;
   transform: translate(-50%, -50%) scale(1.1);
 }
 
-.accounting-section .play-button::before {
+.screenshots-container .play-button::before {
   content: '▶';
   font-size: 24px;
   color: #2c3e50;
   margin-left: 3px;
 }
 
-.accounting-section .screenshot-content {
+.screenshots-container .screenshot-content {
   padding: 18px;
   flex-grow: 1;
   display: flex;
@@ -1486,7 +1489,7 @@ a {
 
 
 @media (max-width: 480px) {
-  .accounting-section .screenshot-grid {
+  .screenshots-container .screenshot-grid {
       grid-template-columns: 1fr;
   }
 }
@@ -1498,13 +1501,13 @@ a {
         font-size: 2rem;
        
     }
-    .accounting-section .screenshots-container{
+     .screenshots-container{
       margin: 40px 0 20px;
     }
-    .accounting-section .screenshot-grid {
+    .screenshots-container .screenshot-grid {
       grid-template-columns: repeat(2, 1fr);
   }
-    .accounting-section .feature-card {
+    .screenshots-container .feature-card {
         margin-bottom: 30px;
     }
 }
@@ -1513,18 +1516,18 @@ a {
     .accounting-section {
         padding: 60px 0;
     }
-   .accounting-section .screenshot-grid {
+   .screenshots-container .screenshot-grid {
       grid-template-columns: 1fr;
 
   }
-  .accounting-section .screenshots-container{
+  .screenshots-container {
     margin: 40px 0 20px;
   }
     .accounting-section .section-title h2 {
         font-size: 1.8rem;
     }
     
-    .accounting-section .price-tag {
+    .screenshots-container .price-tag {
         font-size: 2.5rem;
     }
 }
@@ -2537,6 +2540,79 @@ a {
   transform: translateX(5px);
 }
 
+
+.why-choose-us-section .benefits-container {
+  background: var(--dark-card);
+  border-radius: 15px;
+  padding: 40px;
+  margin: 60px 0;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.why-choose-us-section .benefits-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.why-choose-us-section .benefits-title h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, var(--primary-light), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.why-choose-us-section .benefits-title p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+.why-choose-us-section .benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.why-choose-us-section .benefit-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  border-radius: 10px;
+  transition: var(--transition);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.why-choose-us-section .benefit-item:hover {
+  background: rgba(79, 70, 229, 0.05);
+  transform: translateX(5px);
+}
+
+.why-choose-us-section .benefit-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.why-choose-us-section .benefit-icon i {
+  color: white;
+  font-size: 0.8rem;
+}
+
+.why-choose-us-section .benefit-text {
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
 /* Animation for cards */
 @keyframes why-choose-fadeInUp {
   from {
@@ -2615,6 +2691,16 @@ a {
 
   .why-choose-us-section .card-header {
     padding-bottom: 0;
+  }
+}
+@media (max-width: 480px) {
+  .why-choose-us-section .benefits-container {
+    background: var(--dark-card);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 60px 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -2725,8 +2811,11 @@ a {
 .program-section .section-title p {
   font-size: 1.1rem;
   color: var(--text-light);
-  max-width: 700px;
+  max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
+  font-weight: normal;
+  text-align: center;
 }
 
 .program-section .timeline-container {
@@ -5378,4 +5467,323 @@ a {
   .main-heading {
     font-size: 1.8rem;
   }
+}
+
+
+
+
+
+/* _____________________________ Enrollment Modal CSS ________________________________________*/
+.enrollmentModal .modal-content {
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background: var(--dark-card);
+}
+
+.enrollmentModal .modal-header {
+  background: var(--gradient);
+  color: white;
+  border-radius: 16px 16px 0 0;
+  padding: 1.5rem;
+  border-bottom: none;
+}
+
+.enrollmentModal .modal-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.enrollmentModal .modal-body {
+  padding: 2rem;
+  background: var(--dark-card);
+}
+
+.enrollmentModal .form-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.enrollmentModal .form-control {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--darker-card);
+  background-color: var(--darker-card);
+  color: var(--text);
+  transition: var(--transition);
+}
+
+.enrollmentModal .form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  background-color: var(--darker-card);
+  color: var(--text);
+}
+
+.enrollmentModal .form-control.is-invalid {
+  border-color: var(--accent);
+}
+
+.enrollmentModal .invalid-feedback {
+  display: none;
+  font-size: 0.875rem;
+  color: var(--accent);
+  margin-top: 0.25rem;
+}
+
+.enrollmentModal .was-validated .form-control:invalid ~ .invalid-feedback {
+  display: block;
+}
+
+.enrollmentModal .btn-primary {
+  background: var(--gradient);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: var(--transition);
+  color: white;
+}
+
+.enrollmentModal .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.enrollmentModal .payment-details {
+  background-color: var(--darker-card);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border: 1px solid var(--darker-card);
+  display: none;
+}
+
+.enrollmentModal .payment-details.show {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.enrollmentModal .payment-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.enrollmentModal .payment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.enrollmentModal .payment-method {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--dark-card);
+  border-radius: 8px;
+  border: 1px solid var(--darker-card);
+}
+
+.enrollmentModal .payment-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darker-card);
+  border-radius: 8px;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.enrollmentModal .payment-text {
+  flex: 1;
+}
+
+.enrollmentModal .payment-label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text);
+}
+
+.enrollmentModal .payment-value {
+  color: var(--text-light);
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+.enrollmentModal .copy-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.enrollmentModal .copy-btn:hover {
+  background-color: var(--primary-light);
+}
+
+.enrollmentModal .success-message {
+  text-align: center;
+  padding: 2rem;
+}
+
+.enrollmentModal .success-icon {
+  font-size: 4rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.enrollmentModal .loader {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+}
+
+.enrollmentModal .spinner-border {
+  width: 3rem;
+  height: 3rem;
+  color: var(--primary);
+}
+
+@keyframes enrollmentModal-fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.enrollmentModal .step-indicator {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.enrollmentModal .step {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--darker-card);
+  margin: 0 4px;
+}
+
+.enrollmentModal .step.active {
+  background-color: var(--primary);
+}
+
+.enrollmentModal .step.completed {
+  background-color: var(--accent);
+}
+
+.enrollmentModal .enroll-btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.enrollmentModal .file-upload-container {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--dark-card);
+  border-radius: 8px;
+  border: 2px dashed var(--darker-card);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.enrollmentModal .file-upload-container.dragover {
+  border-color: var(--primary);
+  background-color: rgba(79, 70, 229, 0.05);
+}
+
+.enrollmentModal .file-upload-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.enrollmentModal .file-upload-text {
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.enrollmentModal .file-input {
+  display: none;
+}
+
+.enrollmentModal .file-upload-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.enrollmentModal .file-upload-btn:hover {
+  background-color: var(--primary-light);
+}
+
+.enrollmentModal .file-preview {
+  margin-top: 1rem;
+  display: none;
+}
+
+.enrollmentModal .file-preview.show {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.enrollmentModal .preview-image {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.enrollmentModal .file-name {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.enrollmentModal .remove-file {
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.enrollmentModal .submit-receipt-btn {
+  width: 100%;
+  margin-top: 1rem;
+  display: none;
+}
+
+.enrollmentModal .submit-receipt-btn.show {
+  display: block;
+}
+
+.enrollmentModal .form-check-input:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.enrollmentModal .text-primary {
+  color: var(--primary-light) !important;
+}
+
+.enrollmentModal .bg-light {
+  background-color: var(--darker-card) !important;
+  color: var(--text);
+}
+
+.enrollmentModal .text-muted {
+  color: var(--text-light) !important;
 }

@@ -20,6 +20,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/compare.css" />
   </head>
   <body>
     <div id="campaignBanner" class="campaign-container">
@@ -43,7 +44,12 @@
             </p>
           </div>
 
-          <a href="#enroll" class="enroll-link d-flex align-items-center">
+          <a
+            href="#enroll"
+            class="enroll-link d-flex align-items-center"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+          >
             Enroll Now
             <span style="margin-bottom: -3px" class="ms-2">
               <i class="fas fa-arrow-right"></i
@@ -119,7 +125,13 @@
           </ul>
 
           <div class="d-flex">
-            <a href="#program" class="btn btn-enroll">Enroll Now</a>
+            <button
+              data-bs-toggle="modal"
+              data-bs-target="#enrollmentModal"
+              class="btn btn-enroll"
+            >
+              Enroll Now
+            </button>
           </div>
         </div>
       </div>
@@ -226,7 +238,7 @@
         </div>
       </div>
     </section>
-
+<!-- About section  -->
     <section class="about-section" id="about">
       <div class="floating-element float-1"></div>
       <div class="floating-element float-2"></div>
@@ -369,7 +381,6 @@
                     <p>Certified QuickBooks Professional</p>
                   </div>
                 </div>
-
               </div>
 
               <a
@@ -393,6 +404,150 @@
         </div>
       </div>
     </section>
+        <!-- About Your Mentor Section Enhanced -->
+    <section class="about-section" id="about">
+      <div class="floating-element float-1"></div>
+      <div class="floating-element float-2"></div>
+
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>About Your Mentor</h2>
+          <p>
+            Start Your Journey to Financial Freedom — Learn How to Earn in US
+            Dollars from Home
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="profile-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="text-center">
+                <div class="profile-img-container">
+                  <img
+                    src="./public/images/waqas-khurram.jpg"
+                    alt="Waqas Khurram"
+                    class="profile-img"
+                  />
+                </div>
+                <h3 class="profile-name">Waqas Khurram</h3>
+                <p class="profile-title">
+                  CEO & Founder, SmartAcademicExcellence LLC (USA)
+                </p>
+              </div>
+
+              <p class="profile-bio">
+                <!-- <strong> -->
+                  I'm here to guide you toward a life-changing opportunity —
+                  earning remotely in US dollars while living in
+                  Pakistan.
+                </strong>
+              </p>
+
+              <p class="profile-bio">
+                <!-- <strong> -->
+                  I am a globally qualified finance professional with over a
+                  decade of real-world experience. My academic and professional
+                  credentials include:
+                  <!-- </strong> -->
+              </p>
+
+              <div class="credentials-container">
+                <div class="credential-item">
+                  <div class="credential-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                  </div>
+                  <div class="credential-content">
+                    <h4>Chartered Accountant</h4>
+                    <p>
+                      <strong
+                        >Institute of Chartered Accountants in England and Wales
+                        (ICAEW)</strong
+                      >
+                    </p>
+                  </div>
+                </div>
+
+                <div class="credential-item">
+                  <div class="credential-icon">
+                    <i class="fas fa-award"></i>
+                  </div>
+                  <div class="credential-content">
+                    <h4>Fellow ACCA</h4>
+                    <p>
+                      <strong
+                        >Association of Chartered Certified Accountants (FCCA,
+                        UK)</strong
+                      >
+                    </p>
+                  </div>
+                </div>
+
+                <div class="credential-item">
+                  <div class="credential-icon">
+                    <i class="fas fa-university"></i>
+                  </div>
+                  <div class="credential-content">
+                    <h4>BSc (Hons) Applied Accounting</h4>
+                    <p><strong>Oxford Brookes University, UK</strong></p>
+                  </div>
+                </div>
+                <div class="credential-item">
+                  <div class="credential-icon">
+                    <i class="fas fa-certificate"></i>
+                  </div>
+                  <div class="credential-content">
+                    <h4>6 US Certifications</h4>
+                    <p>
+                      <strong>Institute of Financial Consultants (IFC)</strong>
+                    </p>
+                  
+                  </div>
+                </div>
+
+                <div class="credential-item">
+                  <div class="credential-icon">
+                    <i class="fas fa-tools"></i>
+                  </div>
+                  <div class="credential-content">
+                    <h4>QuickBooks ProAdvisor</h4>
+                    <p><strong>Certified QuickBooks Professional</strong></p>
+                  </div>
+                </div>
+
+                <div class="credential-item">
+                  <div class="credential-icon">
+                    <i class="fas fa-file-alt"></i>
+                  </div>
+                  <div class="credential-content">
+                    <h4>U.S. Registered Tax Preparer</h4>
+                    <p><strong>Certified Tax Professional</strong></p>
+                  </div>
+                </div>
+              </div>
+
+              <p class="profile-bio mt-4">
+                <strong
+                  >But more than just degrees and titles — I bring 10+ years of
+                  hands-on experience in earning online, remotely, in US dollars
+                  while staying in Pakistan.</strong
+                >
+              </p>
+
+              <a
+                href="#program"
+                class="cta-button"
+                data-aos="fade-up"
+                data-aos-delay="550"
+              >
+                Start Your Journey Today
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
 
     <!-- Certificate Modals -->
 
@@ -456,7 +611,7 @@
             <iframe
               src="./public/images/certificates/ACCA-Membership_Certificate.pdf#toolbar=0&view=FitH"
               class="w-100"
-              style="height:70vh;border:0;background:#fff"
+              style="height: 70vh; border: 0; background: #fff"
               title="QuickBooks ProAdvisor Certificate"
             >
             </iframe>
@@ -566,6 +721,281 @@
         </div>
       </div>
     </div>
+
+    <!-- Enrollment Modal -->
+    <div
+      class="modal fade enrollmentModal"
+      id="enrollmentModal"
+      tabindex="-1"
+      aria-labelledby="enrollmentModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="enrollmentModalLabel">
+              <i class="fas fa-user-graduate me-2"></i>Enroll in Financial
+              Freedom Program
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Step Indicator -->
+            <div class="step-indicator">
+              <div class="step active" id="step1"></div>
+              <div class="step" id="step2"></div>
+              <div class="step" id="step3"></div>
+              <div class="step" id="step4"></div>
+            </div>
+
+            <!-- Enrollment Form -->
+            <form id="enrollmentForm" class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter your full name"
+                  required
+                />
+                <div class="invalid-feedback">Please provide a valid name.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please provide a valid email address.
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Enter your phone number"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please provide a valid phone number.
+                </div>
+              </div>
+
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="terms"
+                  required
+                />
+                <label class="form-check-label" for="terms">
+                  I agree to the
+                  <a href="#" class="text-primary">Terms and Conditions</a> and
+                  <a href="#" class="text-primary">Privacy Policy</a>
+                </label>
+                <div class="invalid-feedback">
+                  You must agree to the terms and conditions.
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary enroll-btn">
+                <i class="fas fa-paper-plane me-2"></i>Submit Enrollment
+              </button>
+            </form>
+
+            <!-- Loading State -->
+            <div class="loader" id="loader">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <p class="mt-3">Processing your enrollment...</p>
+            </div>
+
+            <!-- Payment Details -->
+            <div class="payment-details" id="paymentDetails">
+              <h4 class="payment-title">
+                <i class="fas fa-credit-card me-2"></i>Complete Your Payment
+              </h4>
+              <p>
+                Please complete your payment of
+                <strong>10,000 PKR</strong> within 24 hours to secure your spot
+                in the program.
+              </p>
+
+              <div class="payment-info">
+                <div class="payment-method">
+                  <div class="payment-icon">
+                    <i class="fas fa-university"></i>
+                  </div>
+                  <div class="payment-text">
+                    <div class="payment-label">Bank Transfer</div>
+                    <div class="payment-value" id="bankAccount">
+                      1234 5678 9012 3456
+                    </div>
+                    <small>Bank: HBL | Account Title: Financial Freedom</small>
+                  </div>
+                  <button class="copy-btn" data-clipboard-target="#bankAccount">
+                    <i class="fas fa-copy me-1"></i>Copy
+                  </button>
+                </div>
+
+                <div class="payment-method">
+                  <div class="payment-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                  </div>
+                  <div class="payment-text">
+                    <div class="payment-label">JazzCash</div>
+                    <div class="payment-value" id="jazzcashNumber">
+                      0300 1234567
+                    </div>
+                  </div>
+                  <button
+                    class="copy-btn"
+                    data-clipboard-target="#jazzcashNumber"
+                  >
+                    <i class="fas fa-copy me-1"></i>Copy
+                  </button>
+                </div>
+
+                <div class="payment-method">
+                  <div class="payment-icon">
+                    <i class="fas fa-wallet"></i>
+                  </div>
+                  <div class="payment-text">
+                    <div class="payment-label">EasyPaisa</div>
+                    <div class="payment-value" id="easypaisaNumber">
+                      0312 3456789
+                    </div>
+                  </div>
+                  <button
+                    class="copy-btn"
+                    data-clipboard-target="#easypaisaNumber"
+                  >
+                    <i class="fas fa-copy me-1"></i>Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="mt-3 p-3 bg-light rounded">
+                <h6>
+                  <i class="fas fa-info-circle me-2"></i>Important Instructions:
+                </h6>
+                <ul class="mb-0 small">
+                  <li>Send payment of <strong>10,000 PKR</strong></li>
+                  <li>Use your name as the transaction reference</li>
+                  <li>Take a screenshot of the payment confirmation</li>
+                  <li>Upload the screenshot using the form below</li>
+                </ul>
+              </div>
+
+              <!-- File Upload Section -->
+              <div class="file-upload-container" id="fileUploadContainer">
+                <div class="file-upload-icon">
+                  <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <div class="file-upload-text">
+                  <h5>Upload Payment Receipt</h5>
+                  <p class="mb-0">
+                    Drag & drop your payment screenshot here or click to browse
+                  </p>
+                  <p class="small text-muted">
+                    Supported formats: JPG, PNG, PDF (Max 5MB)
+                  </p>
+                </div>
+                <input
+                  type="file"
+                  id="paymentReceipt"
+                  class="file-input"
+                  accept=".jpg,.jpeg,.png,.pdf"
+                />
+                <button
+                  class="file-upload-btn"
+                  onclick="document.getElementById('paymentReceipt').click()"
+                >
+                  <i class="fas fa-folder-open me-2"></i>Choose File
+                </button>
+              </div>
+
+              <!-- File Preview -->
+              <div class="file-preview" id="filePreview">
+                <h6 class="mb-2">Payment Receipt Preview:</h6>
+                <img
+                  src=""
+                  alt="Payment Receipt Preview"
+                  class="preview-image"
+                  id="previewImage"
+                />
+                <div class="file-name" id="fileName"></div>
+                <div class="remove-file" id="removeFile">
+                  <i class="fas fa-times me-1"></i>Remove file
+                </div>
+              </div>
+
+              <!-- Submit Receipt Button -->
+              <button
+                class="btn btn-primary submit-receipt-btn"
+                id="submitReceiptBtn"
+              >
+                <i class="fas fa-check-circle me-2"></i>Submit Payment Receipt
+              </button>
+            </div>
+
+            <!-- Success Message -->
+            <div
+              class="success-message"
+              id="successMessage"
+              style="display: none"
+            >
+              <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h4>Enrollment Completed Successfully!</h4>
+              <p>
+                We've received your payment receipt and enrollment details.
+                You'll receive a confirmation email shortly.
+              </p>
+              <button class="btn btn-primary" data-bs-dismiss="modal">
+                <i class="fas fa-check me-2"></i>Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- ========================== Testing ========================= -->
+
+
+  
+
+    <!-- Why Choose This Mentorship Program Section -->
+
+
+
+ 
+
+
+
+
+
+
+<!-- ================================ End ========================================= -->
 
     <!-- Our success stories section -->
     <section class="success-section" id="success-story">
@@ -689,6 +1119,141 @@
         </div>
       </div>
     </section>
+      <!-- My Success Story Section Enhanced -->
+    <section class="success-section" id="success-story">
+      <div class="decorative-circle circle-1"></div>
+      <div class="decorative-circle circle-2"></div>
+      <div class="decorative-circle circle-3"></div>
+
+      <div class="container">
+        <div class="section-title">
+          <h2>My Success Story</h2>
+          <p>
+            From a Leased Bike to Financial Freedom — Without Ever Doing a Job
+          </p>
+        </div>
+
+        <div class="row g-0 success-container">
+          <div class="col-12">
+            <div class="story-content">
+              <h3>My Journey to Financial Independence</h3>
+              <p>
+                <!-- <strong> -->
+                  About 10 years ago, I started my journey of earning in US
+                  dollars remotely from home — without any mentor, guidance, or
+                  roadmap.
+                  <!-- </strong -->
+                >
+              </p>
+
+              <p>
+                <!-- <strong> -->
+                  At that time, I didn't even have my ACCA qualification. I
+                  only had a leased bike, a dream, and a belief that I could
+                  build something on my own. While others were chasing jobs, I
+                  was chasing financial freedom.
+                  <!-- </strong> -->
+              </p>
+
+              <p>
+                <!-- <strong> -->
+                  I never worked under any boss. I never did a 9–5 job. And I
+                  don't regret it for a second.
+                  <!-- </strong> -->
+              </p>
+
+              <p>
+                <!-- <strong> -->
+                  I started small by working with US-based clients online.
+                  Slowly, my income grew — and guess what? I used my earnings in
+                  US dollars to self-fund all my education in British Pounds,
+                  including top international certifications.
+                  <!-- </strong> -->
+              </p>
+
+              <div class="highlight">
+                <h4>
+                  Today, by the grace of ALLAH, I am a self-made millionaire:
+                </h4>
+                <p>
+                  <!-- <strong> -->
+                    I could easily earn at least two lacs PKR per month by
+                    doing a job because of my qualifications… But why would
+                    I?
+                    <!-- </strong8> -->
+                </p>
+
+                <div class="success-points">
+                  <div class="success-point">
+                    <i class="fas fa-arrow-right"></i>
+                    <span
+                      >
+                      <!-- <strong> -->
+                        I earn much more than that while enjoying a flexible
+                        lifestyle.
+                        <!-- </strong> -->
+                        </span
+                    >
+                  </div>
+                  <div class="success-point">
+                    <i class="fas fa-arrow-right"></i>
+                    <span
+                      >
+                      <!-- <strong> -->
+                        I work on my own terms — no boss, no morning alarms,
+                        no office pressure.
+                        <!-- </strong> -->
+                      </span
+                    >
+                  </div>
+                  <div class="success-point">
+                    <i class="fas fa-arrow-right"></i>
+                    <span
+                      >
+                      <!-- <strong> -->
+                        I have the time to focus on my gym, health,
+                        modelling, and acting passions.
+                        <!-- </strong> -->
+                      </span
+                    >
+                  </div>
+                  <div class="success-point">
+                    <i class="fas fa-arrow-right"></i>
+                    <span
+                      >
+                      <!-- <strong> -->
+                        All of this has been made possible by one thing: My
+                        smart entry into the US market and my decision to earn
+                        in US dollars.
+                        <!-- </strong> -->
+                      </span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="journey-cta">
+                <h4>Now, I'm ready to share this journey with you.</h4>
+                <p>
+                  <!-- <strong> -->
+                    In my 5-Day Mentorship Program, I will show you all the
+                    smart pathways, shortcuts, and methods I have used (and
+                    still use) to earn a consistent income from the US — right
+                    from home.
+                    <!-- </strong> -->
+                </p>
+                <p>
+                  <!-- <strong> -->
+                    If I can do it from zero — so can you.
+                  <!-- </strong> -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Accounting Section -->
     <section class="accounting-section" id="accounting-section">
       <div class="floating-shape shape-1"></div>
@@ -750,8 +1315,6 @@
             <h3>Accounting Crisis in America</h3>
             <p>See what major news channels and platforms are saying</p>
           </div>
-          <!-- src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" -->
-
           <div class="screenshot-grid">
             <div class="screenshot-item">
               <div class="media-container">
@@ -922,6 +1485,237 @@
         </div>
       </div>
     </section>
+      <!-- Why Learn Accounting Skills Section -->
+    <section class="accounting-section-enhanced" id="accounting-section">
+        <div class="accounting-background">
+            <div class="bg-gradient"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-star"></i>
+                    Golden Opportunity
+                </div>
+                <h2 class="section-title">Why Learn Accounting Skills?</h2>
+                <p class="section-subtitle">Seize the massive opportunity in the US accounting market</p>
+            </div>
+
+            <div class="accounting-content-wrapper" data-aos="fade-up" data-aos-delay="100">
+                <div class="main-content-card">
+                    <div class="card-glow"></div>
+                    <div class="content-header">
+                        <div class="header-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3> Why Learn Accounting Skills?</h3>
+                    </div>
+                    <div class="content-body">
+                        <p class="lead-paragraph">
+                            <strong>Because the USA is facing a massive shortage of accountants — and this is your chance to take advantage of it! Right now, the demand for skilled accounting professionals is higher than ever, and the best part? You can earn in dollars by offering your services remotely from Pakistan.</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="crisis-alert-enhanced" data-aos="fade-up" data-aos-delay="200">
+                    <div class="alert-glow"></div>
+                    <div class="alert-header">
+                        <div class="alert-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h4>Major news channels and global platforms are already calling it an "Accounting Crisis in America"</h4>
+                    </div>
+                    <div class="alert-body">
+                        <p><strong>— and smart people are preparing themselves to step in and fill this gap. Why not be among the few who grab this golden opportunity?</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Keep your existing screenshots container here -->
+            <div class="screenshots-container">
+                <!-- Your existing screenshot grid remains the same -->
+            </div>
+        </div>
+          <div class="screenshots-container">
+          <div class="section-title-inner">
+            <h3>Accounting Crisis in America</h3>
+            <p>See what major news channels and platforms are saying</p>
+          </div>
+          <div class="screenshot-grid">
+            <div class="screenshot-item">
+              <div class="media-container">
+                <video class="video-player" controls>
+                  <source
+                    src="./public/images/shortage/shortage.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+
+              <div class="screenshot-content">
+                <h4>US Accountant Shortage Crisis</h4>
+                <p>
+                  Understanding the US accountant shortage crisis - Click play
+                  above
+                </p>
+              </div>
+            </div>
+
+            <!-- News of accountant shortage in America -->
+            <div class="screenshot-item">
+              <a
+                href="https://www.internationalaccountingbulletin.com/news/us-companies-turn-to-global-talent-pool-as-accountant-shortage-hits-crisis-point/"
+                target="_blank"
+              >
+                <img
+                  alt="Business news"
+                  src="./public//images/shortage/1.jpg"
+                  class="screenshot-img"
+                />
+                <div class="screenshot-content">
+                  <h4>International Accounting Bulletin</h4>
+                  <p>
+                    US companies turn to global talent as accountant shortage
+                    hits crisis point
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="screenshot-item">
+              <a
+                href="https://www.cpajournal.com/2025/03/12/accounting-profession-wide-solutions-to-the-talent-shortage-2/"
+                target="_blank"
+              >
+                <img
+                  src="./public//images/shortage/2.jpg"
+                  alt="CPA Journal"
+                  class="screenshot-img"
+                />
+                <div class="screenshot-content">
+                  <h4>The CPA Journal</h4>
+                  <p>
+                    Accounting profession explores solutions to the talent
+                    shortage
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="screenshot-item">
+              <a
+                href="https://www.primeglobal.net/news/accounting-talent-shortage"
+                target="_blank"
+              >
+                <img
+                  src="./public//images/shortage/3.jpg"
+                  alt="PrimeGlobal news"
+                  class="screenshot-img"
+                />
+                <div class="screenshot-content">
+                  <h4>PrimeGlobal</h4>
+                  <p>Unpacking the US accounting talent crisis</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="screenshot-item">
+              <a
+                href="https://www.kent.edu/business/accountant-shortage-united-states-everything-you-need-know"
+                target="_blank"
+              >
+                <img
+                  src="./public//images/shortage/4.jpg"
+                  alt="Kent State University"
+                  class="screenshot-img"
+                />
+                <div class="screenshot-content">
+                  <h4>Kent State University</h4>
+                  <p>
+                    Everything you need to know about the US accountant shortage
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="screenshot-item">
+              <a
+                href="https://www.reuters.com/world/india/us-accounting-firms-tap-india-alleviate-talent-crunch-2025-04-29/"
+                target="_blank"
+              >
+                <img
+                  src="./public//images/shortage/5.jpg"
+                  alt="Reuters news"
+                  class="screenshot-img"
+                />
+                <div class="screenshot-content">
+                  <h4>Reuters</h4>
+                  <p>US accounting firms tap India to ease talent crunch</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="screenshot-item">
+              <a
+                href="https://fortune.com/2024/03/01/accounting-shortage-earnings-report-mistakes/"
+                target="_blank"
+              >
+                <img
+                  src="./public//images/shortage/6.jpg"
+                  alt="Fortune news"
+                  class="screenshot-img"
+                />
+                <div class="screenshot-content">
+                  <h4>Fortune</h4>
+                  <p>
+                    How the accountant shortage is fueling reporting mistakes
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="screenshot-item">
+              <a
+                href="https://www.marketplace.org/story/2024/11/26/the-u-s-faces-a-dire-shortage-of-accountants"
+                target="_blank"
+              >
+                <img
+                  src="./public//images/shortage/7.jpg"
+                  alt="Marketplace news"
+                  class="screenshot-img"
+                />
+                <div class="screenshot-content">
+                  <h4>Marketplace</h4>
+                  <p>The US faces a dire shortage of accountants</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="screenshot-item">
+              <a
+                href="https://www.theaccountant-online.com/news/finance-accounting-personiv-report/"
+                target="_blank"
+              >
+                <img
+                  src="./public//images/shortage/8.jpg"
+                  alt="The Accountant Online"
+                  class="screenshot-img"
+                />
+                <div class="screenshot-content">
+                  <h4>The Accountant Online</h4>
+                  <p>Finance & accounting report highlights talent gap</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+    </section>
     <!-- Why choose us section -->
     <section class="why-choose-us-section" id="why-choose-us">
       <div class="bg-pattern"></div>
@@ -992,6 +1786,96 @@
             </div>
           </div>
         </div>
+
+        <div class="benefits-container">
+          <div class="benefits-title">
+            <h3>Program Benefits</h3>
+            <p>Everything you need to succeed in the U.S. market</p>
+          </div>
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="benefit-text">Learn how to enter the U.S. market</div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="benefit-text">
+                Start earning in U.S. dollars from Pakistan
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="benefit-text">
+                Master in-demand skills — accounting, bookkeeping & U.S. tax
+                return preparation
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="benefit-text">
+                No degree or prior experience needed
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="benefit-text">
+                Just 5 days to transform your future
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="benefit-text">
+                Step-by-step guidance from a real industry expert
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="benefit-text">
+                Learn how to approach and win U.S. clients
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="benefit-text">
+                Work remotely with U.S. clients from day one
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="benefit-text">
+                Get trained on the exact platforms and tools used by U.S.
+                professionals
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="benefit-text">
+                Ideal for students, fresh graduates, job-seekers, housewives,
+                and freelancers
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="batch-info-banner">
         <div class="batch-content">
@@ -999,6 +1883,179 @@
           <span>New Batch starts on <strong>December 20th, 2025</strong></span>
         </div>
       </div>
+    </section>
+      <!-- Why Choose This Mentorship Program Section -->
+    <section class="why-choose-us-section-compare" id="why-choose-us">
+        <div class="bg-pattern"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-crown"></i>
+                    Premium Program
+                </div>
+                <h2 class="section-title">Why Choose This Mentorship Program?</h2>
+                <p class="section-subtitle">Discover what makes our program different and transformative</p>
+            </div>
+
+            <div class="features-grid" data-aos="fade-up" data-aos-delay="100">
+                <!-- Differentiators Card -->
+                <div class="feature-card differentiators-card">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Program Differentiators</h3>
+                        <div class="card-badge">Unique Value</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="content-block">
+                            <div class="emoji-icon">💡</div>
+                            <h4>What Makes This Five Days Financial Freedom Mentorship Program Different?</h4>
+                        </div>
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <div class="check-mark">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span class="feature-text">
+                                    <strong>I'll teach you all the shortcuts, smart strategies, and proven methods I've personally used to build a steady income from the US market — so you don't waste years figuring it out yourself.</strong>
+                                </span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="check-mark">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span class="feature-text">
+                                    <strong>You don't need an accounting or finance background. I'll guide you step-by-step with clear, beginner-friendly training.</strong>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <div class="success-rate">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Proven Success Rate: 95%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits Card -->
+                <div class="feature-card benefits-card">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3>Program Benefits</h3>
+                        <div class="card-badge">🔥 Exclusive</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="content-block">
+                            <div class="emoji-icon">🔥</div>
+                            <h4>Why Choose This Mentorship Program?</h4>
+                        </div>
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span class="benefit-text"><strong>Learn how to enter the U.S. market</strong></span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span class="benefit-text"><strong>Start earning in U.S. dollars from Pakistan</strong></span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span class="benefit-text"><strong>Master in-demand skills — accounting, bookkeeping & U.S. tax return preparation</strong></span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span class="benefit-text"><strong>No degree or prior experience needed</strong></span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span class="benefit-text"><strong>Just 5 days to transform your future</strong></span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span class="benefit-text"><strong>Step-by-step guidance from a real industry expert</strong></span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span class="benefit-text"><strong>Learn how to approach and win U.S. clients</strong></span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span class="benefit-text"><strong>Work remotely with U.S. clients from day one</strong></span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span class="benefit-text"><strong>Get trained on the exact platforms and tools used by U.S. professionals</strong></span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span class="benefit-text"><strong>Ideal for students, fresh graduates, job-seekers, housewives, and freelancers</strong></span>
+                            </div>
+                        </div>
+                        <div class="bonus-highlight">
+                            <i class="fas fa-gift"></i>
+                            <span><strong>👉 And much more — all taught by someone who's actually done it successfully.</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audience Section -->
+            <div class="audience-section" data-aos="fade-up" data-aos-delay="200">
+                <div class="audience-card">
+                    <div class="audience-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Perfect For You If You're:</h3>
+                    </div>
+                    <div class="audience-content">
+                        <p><strong>This 5-day mentorship program is designed especially for students, fresh graduates, freelancers, housewives, and job seekers in Pakistan who want to break the cycle of financial struggle and start earning online with confidence.</strong></p>
+                        
+                        <div class="cta-block">
+                            <div class="cta-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="cta-content">
+                                <h4>Ready to Transform Your Life?</h4>
+                                <p><strong>Now is your chance to learn directly from someone who's already living the dream — and wants to help you do the same.</strong></p>
+                                <p class="highlight-text"><strong>Let's build your financial freedom — together.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- 5 day program section -->
     <section class="program-section" id="program-section">
@@ -1009,8 +2066,17 @@
         <div class="section-title">
           <h2>5-Day Financial Freedom Mentorship Program</h2>
           <p>
-            Transform your future in just 5 days with our intensive,
-            results-driven mentorship
+            <!-- Transform your future in just 5 days with our intensive,
+            results-driven mentorship -->
+            <br />
+            <br />
+            Learn the Smartest Way to Start Earning in US Dollars — Even Without Qualifications <br />
+This 5-day mentorship program is not based on theory — it's based on my 10 years of real success in earning millions from the US market by selling simple but powerful accounting skills.
+You will learn step-by-step how to enter the US market remotely, start offering in-demand services, and set up a sustainable online business from home — with no need for a degree, job experience, or accounting background.
+<br />
+<br />
+Here’s what we’ll cover in the 5 days:
+
           </p>
         </div>
 
@@ -1116,6 +2182,234 @@
         <!-- Call to Action -->
         <div class="cta-container">
           <a href="#program" class="cta-btn">Start Your Journey Today</a>
+        </div>
+      </div>
+    </section>
+        <!-- Benefits Section -->
+    <section class="benefits-section" id="benefits">
+      <div class="background-pattern"></div>
+      <div class="floating-objects">
+        <div class="floating-circle circle-1"></div>
+        <div class="floating-circle circle-2"></div>
+        <div class="floating-circle circle-3"></div>
+      </div>
+      <div class="container">
+        <div class="section-title">
+          <h2>What You Will Achieve & Get from This Mentorship Program</h2>
+          <p>
+            Everything You Need to Start Earning in US Dollars — Delivered
+            Step-by-Step
+          </p>
+        </div>
+
+        <div class="benefits-intro">
+          <p>
+            This 5-day mentorship program is designed to take you from zero
+              to confidently earning in US dollars, using the same techniques
+              and shortcuts I've applied over my 10+ years of success in the US
+              market.
+          </p>
+          <p>
+            Here's what you'll get — and what you'll achieve:
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="benefit-card">
+              <div class="card-header">
+                <div class="icon-container">
+                  <i class="fas fa-lock"></i>
+                </div>
+                <h3 class="card-title">
+                  Access to Your Personal Learning Portal
+                </h3>
+              </div>
+              <div class="card-body">
+                <p>
+                  <strong
+                    >Each student will receive their own login (username &
+                    password) to access the program on my online portal.</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="benefit-card">
+              <div class="card-header">
+                <div class="icon-container">
+                  <i class="fas fa-video"></i>
+                </div>
+                <h3 class="card-title">One New Lecture Released Daily</h3>
+              </div>
+              <div class="card-body">
+                <p>
+                  <strong
+                    >One recorded lecture will be released every day for 5
+                    days.</strong
+                  >
+                </p>
+                <p>
+                  <strong
+                    >Didn't watch a lecture? No problem! All lectures remain
+                    available in your portal after they're released.</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="benefit-card">
+              <div class="card-header">
+                <div class="icon-container">
+                  <i class="fas fa-road"></i>
+                </div>
+                <h3 class="card-title">Complete US Market Entry Roadmap</h3>
+              </div>
+              <div class="card-body">
+                <p>
+                  <strong
+                    >Learn how to start earning from the US remotely — including
+                    skill demand, platforms, services, client strategy, and
+                    business setup.</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="benefit-card">
+              <div class="card-header">
+                <div class="icon-container">
+                  <i class="fas fa-calculator"></i>
+                </div>
+                <h3 class="card-title">
+                  Practical Accounting, QuickBooks & US Tax Training
+                </h3>
+              </div>
+              <div class="card-body">
+                <p>
+                  <strong
+                    >No background required! You'll learn practical, high-demand
+                    skills that US clients are looking for.</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="benefit-card">
+              <div class="card-header">
+                <div class="icon-container">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <h3 class="card-title">
+                  Freelancing Platform & Client-Hunting Strategies
+                </h3>
+              </div>
+              <div class="card-body">
+                <p>
+                  <strong
+                    >Know exactly where and how to start offering your services,
+                    even if you're just starting out.</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="benefit-card">
+              <div class="card-header">
+                <div class="icon-container">
+                  <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3 class="card-title">
+                  Smart Marketing Tools & Real Outreach Methods
+                </h3>
+              </div>
+              <div class="card-body">
+                <p>
+                  <strong
+                    >Learn how to approach US clients, get noticed, and build
+                    lasting professional relationships.</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="benefit-card">
+              <div class="card-header">
+                <div class="icon-container">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="card-title">Bonus: Full-Time Career Roadmap</h3>
+              </div>
+              <div class="card-body">
+                <p>
+                  <strong
+                    >I'll guide you on how to turn this into a long-term,
+                    full-time career, including what I wish I had known 10 years
+                    ago!</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="benefit-card">
+              <div class="card-header">
+                <div class="icon-container">
+                  <i class="fas fa-certificate"></i>
+                </div>
+                <h3 class="card-title">Completion Certificate</h3>
+              </div>
+              <div class="card-body">
+                <p>
+                  <strong
+                    >Receive a professional certificate after Day 5 — proof of
+                    your newly acquired skills and business knowledge.</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="benefit-card">
+              <div class="card-header">
+                <div class="icon-container">
+                  <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="card-title">Confidence & Clarity</h3>
+              </div>
+              <div class="card-body">
+                <p>
+                  <strong
+                    >No confusion, no noise — just a clear, practical, and
+                    proven path to start earning in US dollars.</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefits-outro mt-4">
+          <p>
+            This is not a theory-based course. This is practical mentorship
+              that's helped me build a millionaire lifestyle — and now, it's
+              your turn.
+          </p>
+          <p>Ready to invest in your financial freedom?</p>
         </div>
       </div>
     </section>
@@ -1337,7 +2631,14 @@
               exact strategies I used to build a successful career earning in US
               dollars from Pakistan.
             </p>
-            <button class="cta-button">Enroll Now</button>
+            <button
+              class="cta-button"
+              id="enrollNowBtn"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
+              Enroll Now
+            </button>
             <div class="batch-info-banner">
               <div class="batch-content">
                 <i class="fas fa-calendar-check"></i>
@@ -1666,7 +2967,11 @@
                 <p class="price-period">One-time payment • Lifetime access</p>
               </div>
 
-              <button class="pricing-btn">
+              <button
+                class="pricing-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
                 <i class="fas fa-lock me-2"></i> Enroll Now
               </button>
 
@@ -2036,5 +3341,7 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/enroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
   </body>
 </html>
